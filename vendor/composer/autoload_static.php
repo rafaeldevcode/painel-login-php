@@ -45,6 +45,10 @@ class ComposerStaticInit474e97e9a3ff90b8cf15d9b9fc594ec0
             'Nyholm\\Psr7\\' => 12,
             'Nyholm\\Psr7Server\\' => 18,
         ),
+        'L' => 
+        array (
+            'Login\\Register\\' => 15,
+        ),
         'H' => 
         array (
             'Http\\Message\\' => 13,
@@ -62,10 +66,6 @@ class ComposerStaticInit474e97e9a3ff90b8cf15d9b9fc594ec0
             'Doctrine\\Common\\Cache\\' => 22,
             'Doctrine\\Common\\Annotations\\' => 28,
             'Doctrine\\Common\\' => 16,
-        ),
-        'A' => 
-        array (
-            'Alura\\Cursos\\' => 13,
         ),
     );
 
@@ -147,6 +147,10 @@ class ComposerStaticInit474e97e9a3ff90b8cf15d9b9fc594ec0
         array (
             0 => __DIR__ . '/..' . '/nyholm/psr7-server/src',
         ),
+        'Login\\Register\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+        ),
         'Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/php-http/message-factory/src',
@@ -196,10 +200,6 @@ class ComposerStaticInit474e97e9a3ff90b8cf15d9b9fc594ec0
             0 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
             1 => __DIR__ . '/..' . '/doctrine/event-manager/lib/Doctrine/Common',
             2 => __DIR__ . '/..' . '/doctrine/persistence/lib/Doctrine/Common',
-        ),
-        'Alura\\Cursos\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 

@@ -9,13 +9,13 @@
 
     require_once __DIR__ . '/../../vendor/autoload.php';
 
-    class LoginController implements RequestHandlerInterface
+    class DashboardController implements RequestHandlerInterface
     {
         use Routers;
 
         public function handle(ServerRequestInterface $request): ResponseInterface
         {
-            $html = Routers::route('login-register/login.php', []);
+            $html = Routers::route('dashboard.php', []);
 
             return new Response(200, [], $html);
         }

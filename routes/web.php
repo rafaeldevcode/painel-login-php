@@ -2,8 +2,11 @@
 
     namespace Login\Register\Routes;
 
-    use Login\Register\Controller\LoginController;
+    use Login\Register\Controller\DashboardController;
+    use Login\Register\Controller\{LoginController, RegisterController};
 
     return [
-        '/login' => LoginController::class,
+        '/login'     => LoginController::class,
+        '/register'  => RegisterController::class,
+        '/dashboard' => DashboardController::class
     ];

@@ -12,6 +12,7 @@
         "psr/http-server-handler": "^1.0",
         "nyholm/psr7": "^1.5",
         "nyholm/psr7-server": "^1.0",
-        "psr/container": "^2.0"
+        "psr/container": "^2.0",
+        "doctrine/migrations": "^3.4"
     }
 }

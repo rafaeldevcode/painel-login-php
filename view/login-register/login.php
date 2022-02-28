@@ -22,7 +22,9 @@
                 <i class="fa-solid fa-user-lock"></i>
             </div>
 
-            <form action="?" method="POST">
+            <?php require_once __DIR__ . '/../layouts/message.php' ?>
+
+            <form action="/realiza-login" method="POST">
                 <div class="inputs-group">
                     <input required class="input" type="email" name="email" id="email">
                     <label class="input-label" for="email">Email</label>

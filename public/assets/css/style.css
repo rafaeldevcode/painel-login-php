@@ -177,3 +177,90 @@ body{
     color: var(--color-main);
     text-decoration: underline;
 }
+
+/* ////////// DASHBOARD ///////// */
+.header{
+    width: 100%;
+    padding: 30px;
+    background: var(--color-main);
+}
+
+.body-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-header{
+    color: #FFF;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.logout a{
+    color: rgb(250, 0, 0);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.welcome{
+    width: 100%;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.welcome h1{
+    font-size: 2.5em;
+    animation: welcome .5s linear forwards;
+}
+
+.footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 30px;
+    text-align: center;
+    background: var(--border-color);
+}
+
+.footer p{
+    font-size: 1.2em;
+    color: #000;
+    font-weight: 700;
+}
+
+.footer p a{
+    color: #FFF;
+}
+
+/* ////////// MESSAGE ////////// */
+.message{
+    border-radius: 5px;
+    padding: 8px;
+    text-align: center;
+    color: #FFF;
+}
+
+.danger{
+    border: 1px solid rgb(255, 0, 0);
+    background: rgba(255, 0, 0, 0.5);
+}
+
+.success{
+    border: 1px solid rgb(0, 202, 0);
+    background: rgba(0, 202, 0, 0.5);
+}
+
+/* ///////// KEYFRAME //////// */
+@keyframes welcome {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}

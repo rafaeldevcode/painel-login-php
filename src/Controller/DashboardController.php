@@ -2,6 +2,8 @@
 
     namespace Login\Register\Controller;
 
+    use Login\Register\Entity\User;
+    use Login\Register\Helper\EntityManagerFactory;
     use Login\Register\Services\Routers;
     use Psr\Http\Message\{ServerRequestInterface, ResponseInterface};
     use Psr\Http\Server\RequestHandlerInterface;
@@ -11,11 +13,28 @@
 
     class DashboardController implements RequestHandlerInterface
     {
+        private $entityManager;
+        private $userRepository;
+
         use Routers;
+
+        public function __construct()
+        {
+            $entityManagerFactory = new EntityManagerFactory();
+            $this->entityManager = $entityManagerFactory->getEntityManager();
+            $this->userRepository = $this->entityManager->getRepository(User::class);
+        }
 
         public function handle(ServerRequestInterface $request): ResponseInterface
         {
-            $html = Routers::route('dashboard.php', []);
+            /**
+             * @var User $user
+             */
+            $user = $this->userRepository->findOneBy(['id' => $_SESSION['user_id']]);
+
+            $html = Routers::route('dashboard.php', [
+                'name' => $user->getName(),
+            ]);
 
             return new Response(200, [], $html);
         }

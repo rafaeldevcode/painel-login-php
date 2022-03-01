@@ -26,20 +26,23 @@
                     <input required class="input" type="text" name="name" id="name">
                     <label class="input-label" for="name">Nome</label>
                     <span class="underline"></span>
+                    <span class="error"></span>
                 </div>
 
                 <div class="inputs-group down">
                     <input required class="input" type="email" name="email" id="email">
                     <label class="input-label" for="email">Email</label>
                     <span class="underline"></span>
+                    <span class="error"></span>
                 </div>
 
                 <div class="inputs-group down">
                     <input required class="input" type="password" name="password" id="password" autocomplete="FALSE">
                     <label class="input-label" for="password">Password</label>
                     <span class="underline"></span>
+                    <span class="error"></span>
 
-                    <button type="button" title="Ver Senha" class="btn-eyes">
+                    <button type="button" title="Ver Senha" class="btn-eyes" id="btn-eyes">
                         <i class="fa-solid fa-eye" id="eyes"></i>
                     </button>
                 </div>

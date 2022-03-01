@@ -14,7 +14,6 @@
     class CreateRegisterController implements RequestHandlerInterface
     {
         private $entityManager;
-        // private $userRepository;
 
         use Routers;
 
@@ -22,7 +21,6 @@
         {
             $entityManagerFactory = new EntityManagerFactory();
             $this->entityManager = $entityManagerFactory->getEntityManager();
-            // $this->userRepository = $this->entityManager->getRepository(User::class);
         }
 
         public function handle(ServerRequestInterface $request): ResponseInterface

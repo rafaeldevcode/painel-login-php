@@ -18,7 +18,8 @@
     <main class="content">
         <section class="section-form">
             <div class="form-avatar">
-                <i class="fa-solid fa-user-lock"></i>
+                <i class="fa-solid fa-user-lock" id="avatar"></i>
+                <!-- <i class="fa-solid fa-user-unlock"></i> -->
             </div>
 
             <?php require_once __DIR__ . '/../layouts/message.php' ?>
@@ -28,12 +29,14 @@
                     <input required class="input" type="email" name="email" id="email">
                     <label class="input-label" for="email">Email</label>
                     <span class="underline"></span>
+                    <span class="error"></span>
                 </div>
 
                 <div class="inputs-group down">
                     <input required class="input" type="password" name="password" id="password" autocomplete="FALSE">
                     <label class="input-label" for="password">Password</label>
                     <span class="underline"></span>
+                    <span class="error"></span>
 
                     <button type="button" title="Ver Senha" class="btn-eyes" id="btn-eyes">
                         <i class="fa-solid fa-eye" id="eyes"></i>

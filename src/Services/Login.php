@@ -11,7 +11,8 @@
             if((!isset($_SESSION['logged'])) && 
                 (strpos($path, 'login') === false) &&
                 (strpos($path, 'register') === false) &&
-                (strpos($path, 'logout') === false)){
+                (strpos($path, 'logout') === false) &&
+                ($path !== '/')){
                     header('location: /login', true, 302);
 
                     return;

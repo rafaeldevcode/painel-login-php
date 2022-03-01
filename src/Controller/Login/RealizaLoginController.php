@@ -29,20 +29,6 @@
         {
             $data = $request->getParsedBody();
 
-            $email = filter_var($data['email'], FILTER_VALIDATE_EMAIL);
-            if((is_null($email)) || ($email === false)){
-
-                Routers::session('danger', 'Email inválido!');
-                return new Response(302, ['location' => '/login']);
-            }
-
-            $pass = filter_var($data['password'], FILTER_SANITIZE_STRING);
-            if((is_null($pass)) || ($pass === false)){
-
-                Routers::session('danger', 'Senha inválido!');
-                return new Response(302, ['location' => '/login']);
-            }
-
             /**
              * @var User $user
              */

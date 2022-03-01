@@ -1,6 +1,6 @@
 <?php
 
-    namespace Login\Register\Services;
+    namespace Painel\Services;
 
     trait Routers
     {

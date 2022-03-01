@@ -12,9 +12,9 @@ class ComposerStaticInit474e97e9a3ff90b8cf15d9b9fc594ec0
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
         'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
+        'c2aad8997a98dfc4771bdbffea3d62b7' => __DIR__ . '/..' . '/laminas/laminas-code/polyfill/ReflectionEnumPolyfill.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
-        'c2aad8997a98dfc4771bdbffea3d62b7' => __DIR__ . '/..' . '/laminas/laminas-code/polyfill/ReflectionEnumPolyfill.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -43,6 +43,7 @@ class ComposerStaticInit474e97e9a3ff90b8cf15d9b9fc594ec0
             'Psr\\Container\\' => 14,
             'Psr\\Cache\\' => 10,
             'ProxyManager\\' => 13,
+            'Painel\\' => 7,
         ),
         'N' => 
         array (
@@ -51,7 +52,6 @@ class ComposerStaticInit474e97e9a3ff90b8cf15d9b9fc594ec0
         ),
         'L' => 
         array (
-            'Login\\Register\\' => 15,
             'Laminas\\Code\\' => 13,
         ),
         'H' => 
@@ -157,6 +157,10 @@ class ComposerStaticInit474e97e9a3ff90b8cf15d9b9fc594ec0
         array (
             0 => __DIR__ . '/..' . '/friendsofphp/proxy-manager-lts/src/ProxyManager',
         ),
+        'Painel\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+        ),
         'Nyholm\\Psr7\\' => 
         array (
             0 => __DIR__ . '/..' . '/nyholm/psr7/src',
@@ -164,10 +168,6 @@ class ComposerStaticInit474e97e9a3ff90b8cf15d9b9fc594ec0
         'Nyholm\\Psr7Server\\' => 
         array (
             0 => __DIR__ . '/..' . '/nyholm/psr7-server/src',
-        ),
-        'Login\\Register\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src',
         ),
         'Laminas\\Code\\' => 
         array (

@@ -1,15 +1,15 @@
 <?php
 
-    namespace Login\Register\Controller;
+    namespace Painel\Controller\Register;
 
-    use Login\Register\Entity\User;
-    use Login\Register\Helper\EntityManagerFactory;
-    use Login\Register\Services\{Login, Routers};
+    use Painel\Entity\User;
+    use Painel\Helper\EntityManagerFactory;
+    use Painel\Services\{Login, Routers};
     use Psr\Http\Message\{ServerRequestInterface, ResponseInterface};
     use Psr\Http\Server\RequestHandlerInterface;
     use Nyholm\Psr7\Response;
 
-    require_once __DIR__ . '/../../vendor/autoload.php';
+    require_once __DIR__ . '/../../../vendor/autoload.php';
 
     class CreateRegisterController implements RequestHandlerInterface
     {

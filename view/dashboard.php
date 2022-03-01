@@ -1,5 +1,5 @@
 <?php 
-    use Login\Register\Services\Routers;
+    use Painel\Services\Routers;
 ?>
 
 <!DOCTYPE html>
@@ -31,6 +31,10 @@
     <main class="content">
         <section class="welcome">
             <h1>Bem Vindo! <?php echo $name; ?></h1>
+        </section>
+
+        <section class="emoji">
+            <img src="<?php Routers::asset('assets/images/emoji-coffe.png') ?>" alt="Emoji Coffe">
         </section>
     </main>
 

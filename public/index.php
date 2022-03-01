@@ -2,7 +2,7 @@
 
     require_once __DIR__ . '/../vendor/autoload.php';
 
-    use Login\Register\Services\Login;
+    use Painel\Services\Login;
     use Nyholm\Psr7\Factory\Psr17Factory;
     use Nyholm\Psr7Server\ServerRequestCreator;
 

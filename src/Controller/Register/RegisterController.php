@@ -1,21 +1,21 @@
 <?php
 
-    namespace Login\Register\Controller;
+    namespace Painel\Controller\Register;
 
-    use Login\Register\Services\Routers;
+    use Painel\Services\Routers;
     use Psr\Http\Message\{ServerRequestInterface, ResponseInterface};
     use Psr\Http\Server\RequestHandlerInterface;
     use Nyholm\Psr7\Response;
 
-    require_once __DIR__ . '/../../vendor/autoload.php';
+    require_once __DIR__ . '/../../../vendor/autoload.php';
 
-    class LoginController implements RequestHandlerInterface
+    class RegisterController implements RequestHandlerInterface
     {
         use Routers;
 
         public function handle(ServerRequestInterface $request): ResponseInterface
         {
-            $html = Routers::route('login-register/login.php', []);
+            $html = Routers::route('register/index.php', []);
 
             return new Response(200, [], $html);
         }

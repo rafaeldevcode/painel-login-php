@@ -1,5 +1,5 @@
 <?php 
-    use Login\Register\Services\Routers;
+    use Painel\Services\Routers;
 ?>
 
 <!DOCTYPE html>
@@ -22,19 +22,19 @@
             </div>
 
             <form action="/salvar-usuario" method="POST">
-                <div class="inputs-group">
+                <div class="inputs-group down">
                     <input required class="input" type="text" name="name" id="name">
                     <label class="input-label" for="name">Nome</label>
                     <span class="underline"></span>
                 </div>
 
-                <div class="inputs-group">
+                <div class="inputs-group down">
                     <input required class="input" type="email" name="email" id="email">
                     <label class="input-label" for="email">Email</label>
                     <span class="underline"></span>
                 </div>
 
-                <div class="inputs-group">
+                <div class="inputs-group down">
                     <input required class="input" type="password" name="password" id="password" autocomplete="FALSE">
                     <label class="input-label" for="password">Password</label>
                     <span class="underline"></span>
@@ -44,7 +44,7 @@
                     </button>
                 </div>
 
-                <div class="inputs-group-btn">
+                <div class="inputs-group-btn down">
                     <a href="/login" class="inputs-btn secondary" type="button" title="Ir para login">Fazer login</a>
                     <input class="inputs-btn" title="Fazer Login" type="submit" value="Registrar">
                 </div>

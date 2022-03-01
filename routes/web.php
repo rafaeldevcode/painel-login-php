@@ -1,9 +1,10 @@
 <?php
 
-    namespace Login\Register\Routes;
+    namespace Painel\Routes;
 
-    use Login\Register\Controller\DashboardController;
-    use Login\Register\Controller\{CreateRegisterController, LoginController, LogoutController, RealizaLoginController, RegisterController};
+    use Painel\Controller\DashboardController;
+    use Painel\Controller\Login\{LoginController, LogoutController, RealizaLoginController};
+    use Painel\Controller\Register\{CreateRegisterController, RegisterController};
 
     return [
         '/login'          => LoginController::class,

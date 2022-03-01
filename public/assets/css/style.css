@@ -49,6 +49,14 @@ body{
     font-size: 60px;
 }
 
+.form-avatar .fa-user-lock{
+    color: rgb(255, 0, 0);
+}
+
+.form-avatar .fa-user-unlock{
+    color: rgb(21, 255, 0);
+}
+
 .inputs-group{
     width: 100%;
     position: relative;
@@ -215,6 +223,14 @@ body{
     animation: welcome .5s linear forwards;
 }
 
+.emoji{
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    transform: scale(0);
+    animation:  emoji-coffe .5s .5s linear forwards;
+}
+
 .footer{
     width: 100%;
     position: absolute;
@@ -254,6 +270,14 @@ body{
 }
 
 /* ///////// KEYFRAME //////// */
+.down{
+    animation: down .4s linear forwards;
+}
+
+.shake{
+    animation: shake .3s linear forwards;
+}
+
 @keyframes welcome {
     0%{
         transform: scale(0);
@@ -262,5 +286,48 @@ body{
     100%{
         transform: scale(1);
         opacity: 1;
+    }
+}
+
+@keyframes emoji-coffe {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes down {
+    0%{
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes shake {
+    0%{
+        transform: translateX(0);
+    }
+    20%{
+        transform: translateX(20px);
+    }
+    40%{
+        transform: translateX(-20px);
+    }
+    60%{
+        transform: translateX(20px);
+    }
+    80%{
+        transform: translateX(-20px);
+    }
+    100%{
+        transform: translateX(0);
     }
 }

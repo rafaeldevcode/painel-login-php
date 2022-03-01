@@ -1,6 +1,6 @@
 <?php
 
-    namespace Login\Register\Entity;
+    namespace Painel\Entity;
 
     /**
      * @Entity

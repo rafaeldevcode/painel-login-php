@@ -1,6 +1,6 @@
 <?php
 
-    namespace Login\Register\Helper;
+    namespace Painel\Helper;
 
     require_once __DIR__ . '/../../vendor/autoload.php';
 

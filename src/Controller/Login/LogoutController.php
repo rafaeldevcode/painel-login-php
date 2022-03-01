@@ -1,13 +1,13 @@
 <?php
 
-    namespace Login\Register\Controller;
+    namespace Painel\Controller\Login;
 
-    use Login\Register\Services\Routers;
+    use Painel\Services\Routers;
     use Psr\Http\Message\{ServerRequestInterface, ResponseInterface};
     use Psr\Http\Server\RequestHandlerInterface;
     use Nyholm\Psr7\Response;
 
-    require_once __DIR__ . '/../../vendor/autoload.php';
+    require_once __DIR__ . '/../../../vendor/autoload.php';
 
     class LogoutController implements RequestHandlerInterface
     {

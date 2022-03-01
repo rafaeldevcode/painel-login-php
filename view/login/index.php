@@ -1,5 +1,5 @@
 <?php 
-    use Login\Register\Services\Routers;
+    use Painel\Services\Routers;
 ?>
 
 <!DOCTYPE html>
@@ -18,20 +18,19 @@
     <main class="content">
         <section class="section-form">
             <div class="form-avatar">
-                <!-- <i class="fa-solid fa-user-unlock"></i> -->
                 <i class="fa-solid fa-user-lock"></i>
             </div>
 
             <?php require_once __DIR__ . '/../layouts/message.php' ?>
 
             <form action="/realiza-login" method="POST">
-                <div class="inputs-group">
+                <div class="inputs-group down">
                     <input required class="input" type="email" name="email" id="email">
                     <label class="input-label" for="email">Email</label>
                     <span class="underline"></span>
                 </div>
 
-                <div class="inputs-group">
+                <div class="inputs-group down">
                     <input required class="input" type="password" name="password" id="password" autocomplete="FALSE">
                     <label class="input-label" for="password">Password</label>
                     <span class="underline"></span>
@@ -41,7 +40,7 @@
                     </button>
                 </div>
 
-                <div class="inputs-group-btn">
+                <div class="inputs-group-btn down">
                     <span>
                         <input class="input-check" type="checkbox" id="remember" name="remember">
                         <label class="label-check" for="remember">Lembre-me</label>

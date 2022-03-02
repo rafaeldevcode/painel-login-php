@@ -18,11 +18,11 @@
          */
         private $name;
                 /**
-         * @Column(type="string")
+         * @Column(type="string", varchar="255")
          */
         private $email;
                 /**
-         * @Column(type="string")
+         * @Column(type="string", varchar="255")
          */
         private $pass;
 

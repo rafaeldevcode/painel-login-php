@@ -24,6 +24,11 @@ body{
     font-size: 16px;
 }
 
+/* ////// FORMATAÇÃO /////// */
+.margin-auto{
+    margin: auto;
+}
+
 .content{
     width: 100%;
     padding: 10px;
@@ -278,6 +283,7 @@ body{
     padding: 8px;
     text-align: center;
     color: #FFF;
+    margin-bottom: 10px;
 }
 
 .danger{

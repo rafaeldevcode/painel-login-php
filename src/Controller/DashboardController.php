@@ -2,7 +2,7 @@
 
     namespace Painel\Controller;
 
-    use Painel\Entity\User;
+    use Painel\Model\User;
     use Painel\Helper\EntityManagerFactory;
     use Painel\Services\Routers;
     use Psr\Http\Message\{ServerRequestInterface, ResponseInterface};

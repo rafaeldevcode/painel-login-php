@@ -1,6 +1,6 @@
 <?php
 
-    namespace Painel\Entity;
+    namespace Painel\Model;
 
     /**
      * @Entity

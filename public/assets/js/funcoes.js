@@ -1,3 +1,8 @@
+/////// ADICIONAR FOOTER NO FINAL DA PAGINA ////////////
+if (document.querySelector('body').offsetHeight > window.innerHeight){
+    document.querySelector('footer').classList.add('footer-relative');
+}
+
 function exibirSenha(){
     document.getElementById('btn-eyes').addEventListener('click', ()=>{
         let pass = document.getElementById('password');
@@ -16,7 +21,35 @@ function exibirSenha(){
 }
 exibirSenha();
 
-let fields = document.querySelectorAll('[required]');
+function oppenMenu(){
+    let menuCheck = document.getElementById('checkbox-menu');
+    let menuAside = document.querySelector('.menu-aside');
+
+        menuCheck.addEventListener('click', ()=>{
+
+            if(menuCheck.checked === true){
+                menuAside.classList.remove('closed-menu');
+                menuAside.classList.add('oppen-menu');
+            }else{
+                menuAside.classList.remove('oppen-menu');
+                menuAside.classList.add('closed-menu');
+            }
+        });
+
+}
+
+function getFields(){
+    let fields = document.querySelectorAll('[required]');
+
+    for(let field of fields){
+        field.addEventListener('invalid', event => {
+            // Eliminar bubble
+            event.preventDefault();
+            customValidation(event)
+        });
+        field.addEventListener('blur', customValidation);
+    }
+}
 
 function validateField(field){
     function verifyError(){
@@ -85,15 +118,6 @@ function customValidation(event){
     let validation = validateField(field);
 
     validation();
-}
-
-for(let field of fields){
-    field.addEventListener('invalid', event => {
-        // Eliminar bubble
-        event.preventDefault();
-        customValidation(event)
-    });
-    field.addEventListener('blur', customValidation);
 }
 
 // document.querySelector('form').addEventListener('submit', (event)=>{

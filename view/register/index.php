@@ -6,14 +6,18 @@
     <?php require_once __DIR__ . '/../layouts/components/head.php'; ?>
 </head>
 <body>
+
+    <?php require_once __DIR__ . '/../layouts/components/header.php' ?>
     
     <main class="content">
+        <?php require_once __DIR__ . '/../layouts/components/menu-aside.php' ?>
+
         <section class="section-form">
             <div class="form-avatar">
                 <i class="fa-solid fa-user-plus"></i>
             </div>
 
-            <form action="/salvar-usuario" method="POST">
+            <form action="/save-user" method="POST">
                 <div class="inputs-group down">
                     <input required class="input" type="text" name="name" id="name">
                     <label class="input-label" for="name">Nome</label>
@@ -47,7 +51,14 @@
         </section>
     </main>
 
+    <?php require_once __DIR__ . '/../layouts/components/footer.php' ?>
+
     <script type="text/javascript" src="https://kit.fontawesome.com/b0387bb217.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="<?php Routers::asset('assets/js/funcoes.js') ?>"></script>
+
+    <script type="text/javascript">
+        oppenMenu();
+        getFields();
+    </script>
 </body>
 </html>

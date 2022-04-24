@@ -12,7 +12,7 @@
         '/login'          => LoginController::class,
         '/register'       => RegisterController::class,
         '/dashboard'      => DashboardController::class,
-        '/save-user' => CreateRegisterController::class,
+        '/save-user'      => CreateRegisterController::class,
         '/logout'         => LogoutController::class,
-        '/login-to'  => RealizaLoginController::class,
+        '/login-to'       => RealizaLoginController::class,
     ];

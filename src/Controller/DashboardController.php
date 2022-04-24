@@ -16,8 +16,6 @@
         private $entityManager;
         private $userRepository;
 
-        use Routers;
-
         public function __construct()
         {
             $entityManagerFactory = new EntityManagerFactory();
@@ -32,7 +30,7 @@
              */
             $user = $this->userRepository->findOneBy(['id' => $_SESSION['user_id']]);
 
-            $html = Routers::route('dashboard.php', [
+            $html = route('dashboard', [
                 'name'  => $user->getName(),
                 'title' => 'Dashboard',
             ]);

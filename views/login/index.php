@@ -1,5 +1,3 @@
-<?php use Painel\Services\Routers; ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -14,17 +12,13 @@
 
         <section class="section-form">
             <div class="form-avatar">
-                <i class="fa-solid fa-user-plus"></i>
+                <i class="fa-solid fa-user-lock" id="avatar"></i>
+                <!-- <i class="fa-solid fa-user-unlock"></i> -->
             </div>
 
-            <form action="/save-user" method="POST">
-                <div class="inputs-group down">
-                    <input required class="input" type="text" name="name" id="name">
-                    <label class="input-label" for="name">Nome</label>
-                    <span class="underline"></span>
-                    <span class="error"></span>
-                </div>
+            <?php require_once __DIR__ . '/../layouts/components/message.php' ?>
 
+            <form action="/login-to" method="POST">
                 <div class="inputs-group down">
                     <input required class="input" type="email" name="email" id="email">
                     <label class="input-label" for="email">Email</label>
@@ -44,17 +38,26 @@
                 </div>
 
                 <div class="inputs-group-btn down">
-                    <a href="/login" class="inputs-btn secondary" type="button" title="Ir para login">Fazer login</a>
-                    <input class="inputs-btn" title="Fazer Login" type="submit" value="Registrar">
+                    <span>
+                        <input class="input-check" type="checkbox" id="remember" name="remember">
+                        <label class="label-check" for="remember">Lembre-me</label>
+                    </span>
+
+                    <input class="inputs-btn" title="Fazer Login" type="submit" value="Logar">
                 </div>
             </form>
+
+            <span class="link-group">
+                <a href="#">Esqueci minha senha</a>
+                <a href="/register">Registrar</a>
+            </span>
         </section>
     </main>
 
     <?php require_once __DIR__ . '/../layouts/components/footer.php' ?>
 
     <script type="text/javascript" src="https://kit.fontawesome.com/b0387bb217.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="<?php Routers::asset('assets/js/funcoes.js') ?>"></script>
+    <script type="text/javascript" src="<?php asset('assets/js/funcoes.js') ?>"></script>
 
     <script type="text/javascript">
         oppenMenu();

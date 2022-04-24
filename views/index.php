@@ -1,5 +1,3 @@
-<?php use Painel\Services\Routers; ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -17,7 +15,7 @@
         </section>
 
         <section class="emoji">
-            <img src="<?php Routers::asset('assets/images/emoji-login.png') ?>" alt="Ir para página de login">
+            <img src="<?php asset('assets/images/emoji-login.png') ?>" alt="Ir para página de login">
 
             <div class="inputs-group-btn down">
                 <a href="/login" class="inputs-btn secondary margin-auto" title="Ir para login">Fazer login</a>
@@ -28,7 +26,7 @@
     <?php require_once __DIR__ . '/layouts/components/footer.php'; ?>
 
     <script type="text/javascript" src="https://kit.fontawesome.com/b0387bb217.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="<?php Routers::asset('assets/js/funcoes.js') ?>"></script>
+    <script type="text/javascript" src="<?php asset('assets/js/funcoes.js') ?>"></script>
     <script type="text/javascript">
         oppenMenu();
     </script>

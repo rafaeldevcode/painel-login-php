@@ -1,6 +1,7 @@
 <?php
 
     require_once __DIR__ . '/../vendor/autoload.php';
+    require_once __DIR__ . '/../config/bootstrap.php';
 
     use Painel\Services\Login;
     use Nyholm\Psr7\Factory\Psr17Factory;
@@ -11,7 +12,7 @@
 
     if(!array_key_exists($path, $routes)): header('location: /not-found', true, 302); exit(); endif;
 
-    Login::verifyLogin($path);
+    // Login::verifyLogin($path);
 
     $psr17Factory = new Psr17Factory();
     $creator = new ServerRequestCreator(

@@ -30,7 +30,7 @@
              */
             $user = $this->userRepository->findOneBy(['id' => $_SESSION['user_id']]);
 
-            $html = route('dashboard', [
+            $html = view('dashboard', [
                 'name'  => $user->getName(),
                 'title' => 'Dashboard',
             ]);

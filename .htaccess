@@ -1,5 +1,16 @@
+# Proteger contra indexação de arquivos
+Options -Indexes
+
+# Inicio de proteção do htaccess
+<files ~ "^.*\.([Hh][Tt][Aa])">
+order allow,deny
+deny from all
+satisfy all
+</files>
+# Fim da proteção do htaccess
+
 RewriteEngine On
-RewriteBase /
+RewriteBase /painel-login-php
 
 RewriteCond %{THE_REQUEST} /public/([^\s?]*) [NC]
 RewriteRule ^ %1 [L,NE,R=302]

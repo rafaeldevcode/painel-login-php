@@ -25,7 +25,7 @@ endif;
 
 // Retornar o html com todas as variaveis
 if(!function_exists('route')):
-    function route(string $path, array $data): string
+    function view(string $path, array $data): string
     {
         // Extrair as os dados do array em variaveis individuais
         extract($data);
@@ -36,5 +36,29 @@ if(!function_exists('route')):
         $html = ob_get_clean();
 
         return $html;
+    }
+endif;
+
+// Retornar o path da url a fim de especificar qual rota chamar
+if(!function_exists('path')):
+    function path(): string
+    {
+        $server_name = $_SERVER['SERVER_NAME'];
+
+        // Definir se irá usar o 'REDIRECT_URL' ou 'PATH_INFO'
+        // REDIRECT_URL Usado se estiver em produção
+        // PATH_INFO Usado para desenvolvimento local
+        if(($server_name === 'localhost') ||
+        ($server_name === '127.0.0.1') ||
+        ($server_name === '0.0.0.0')):
+            $path = !isset($_SERVER['PATH_INFO']) ? '/' : $_SERVER['PATH_INFO'];
+        else:
+            $path = !isset($_SERVER['REDIRECT_URL']) ? '/' : $_SERVER['REDIRECT_URL'];
+        endif;
+
+        // Garantir que o ultimo caracter seja sempre um '/'
+        $path = substr($path, -1, 1) === '/' ? $path : "{$path}/";
+
+        return $path;
     }
 endif;

@@ -13,7 +13,7 @@
         public function handle(ServerRequestInterface $request): ResponseInterface
         {
 
-            $html = route('index', [
+            $html = view('index', [
                 'title' => 'Início',
             ]);
 

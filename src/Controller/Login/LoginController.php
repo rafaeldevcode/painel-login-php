@@ -12,7 +12,7 @@
     {
         public function handle(ServerRequestInterface $request): ResponseInterface
         {
-            $html = route('login/index', [
+            $html = view('login/index', [
                 'title' => 'Login',
             ]);
 

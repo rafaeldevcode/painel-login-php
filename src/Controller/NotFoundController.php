@@ -13,7 +13,7 @@
         public function handle(ServerRequestInterface $request): ResponseInterface
         {
 
-            $html = route('404', [
+            $html = view('404', [
                 'title' => 'Página não encontrada | 404',
             ]);
 

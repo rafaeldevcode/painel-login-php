@@ -16,10 +16,11 @@ endif;
 if(!function_exists('asset')):
     function asset(string $path): void
     {
+        $pathUrl = pathUrl();
         $protocol = (isset($_SERVER['HTTPS']) && ($_SERVER['HTTPS'] == 'on') ? 'https' : 'http');
         $host = $_SERVER['HTTP_HOST'];  
         
-        echo "{$protocol}://{$host}/{$path}";
+        echo "{$protocol}://{$host}//{$pathUrl}/public/{$path}";
     }
 endif;
 
@@ -60,5 +61,26 @@ if(!function_exists('path')):
         $path = substr($path, -1, 1) === '/' ? $path : "{$path}/";
 
         return $path;
+    }
+endif;
+
+// Retorna o path da url, usado para caso a aplicação não esteja na raiz do servidor e sim em um subdiretório
+if(!function_exists('patUrl')):
+    function pathUrl(): string
+    {
+        $path = $_SERVER['REQUEST_URI']; // Capturando o path inteiro apos o nome do host
+        $path = explode('/', $path); // Transformando path em um array
+        $path = array_filter($path); // Removes os valores vazios do array
+        $path = $path[1]; // Paga a primeira posição do array
+        
+        return $path;
+    }
+endif;
+
+// Retornar a rota a ser redirecionado
+if(!function_exists('route')):
+    function route(string $route): void
+    {
+        echo  '/' . pathUrl() . $route;
     }
 endif;

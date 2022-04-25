@@ -54,14 +54,14 @@
                         <div class="icon">
                             <i class="fa-solid fa-arrow-right-from-bracket"></i>
                         </div>
-                        <a title="Sair" href="/logout">Sair</a>
+                        <a title="Sair" href="<?php route('/logout') ?>">Sair</a>
                     </li>
             <?php } else{ ?> 
                 <li>
                     <div class="icon">
                         <i class="fa-solid fa-right-to-bracket"></i>
                     </div>
-                    <a title="Entrar" href="/login">Entrar</a>
+                    <a title="Entrar" href="<?php route('/login') ?>">Entrar</a>
                 </li>    
             <?php } ?>
         </ul>

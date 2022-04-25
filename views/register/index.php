@@ -15,7 +15,7 @@
                 <i class="fa-solid fa-user-plus"></i>
             </div>
 
-            <form action="/save-user" method="POST">
+            <form action="<?php route('/save-user') ?>" method="POST">
                 <div class="inputs-group down">
                     <input required class="input" type="text" name="name" id="name">
                     <label class="input-label" for="name">Nome</label>
@@ -42,7 +42,7 @@
                 </div>
 
                 <div class="inputs-group-btn down">
-                    <a href="/login" class="inputs-btn secondary" type="button" title="Ir para login">Fazer login</a>
+                    <a href="<?php route('/login') ?>" class="inputs-btn secondary" type="button" title="Ir para login">Fazer login</a>
                     <input class="inputs-btn" title="Fazer Login" type="submit" value="Registrar">
                 </div>
             </form>

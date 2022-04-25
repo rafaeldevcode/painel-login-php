@@ -18,7 +18,7 @@
             <img src="<?php asset('assets/images/emoji-login.png') ?>" alt="Ir para página de login">
 
             <div class="inputs-group-btn down">
-                <a href="/login" class="inputs-btn secondary margin-auto" title="Ir para login">Fazer login</a>
+                <a href="<?php route('/login') ?>" class="inputs-btn secondary margin-auto" title="Ir para login">Fazer login</a>
             </div>
         </section>
     </main>

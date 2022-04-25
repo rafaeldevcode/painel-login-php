@@ -18,7 +18,7 @@
 
             <?php require_once __DIR__ . '/../layouts/components/message.php' ?>
 
-            <form action="/login-to" method="POST">
+            <form action="<?php route('/login-to') ?>" method="POST">
                 <div class="inputs-group down">
                     <input required class="input" type="email" name="email" id="email">
                     <label class="input-label" for="email">Email</label>
@@ -49,7 +49,7 @@
 
             <span class="link-group">
                 <a href="#">Esqueci minha senha</a>
-                <a href="/register">Registrar</a>
+                <a href="<?php route('/register') ?>">Registrar</a>
             </span>
         </section>
     </main>

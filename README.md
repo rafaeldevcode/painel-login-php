@@ -36,12 +36,12 @@
 
 ##
 
-# Para rodar localmente com o servidor do php
+## Para rodar localmente com o servidor do php
 
 - php -S localhost:8080 -t public
 
 
-# Para rodar localmente em um servidor apache utilizando mamp, xampp ou qualquer outro software
+## Para rodar localmente em um servidor apache utilizando mamp, xampp ou qualquer outro software
 - Adicionar em .haccess na raiz do projeto o path em que esta seu projeto, Ex:
     http://localhost/meu-projeto
     em .htaccess substitua 'RewriteBase /' => 'RewriteBase /meu-projeto'

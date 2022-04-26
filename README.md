@@ -1,4 +1,4 @@
-# Dependências 
+## Dependências 
 - doctrine/orm
 - symfony/cache
 - doctrine/annotations
@@ -11,7 +11,7 @@
 
 ##
 
-# Ferramentas e linguagens utilizadas
+## Ferramentas e linguagens utilizadas
 - Php
 - ORM Doctrine
 - HTML5
@@ -28,7 +28,7 @@
 
 ##
 
-# Instalando pacotes depois de baixar projeto
+## Instalando pacotes depois de baixar projeto
 
 - composer install [Instala as dependências]
 - vendor/bin/doctrine-migrations migrations:diff [Criar as tabelas no Banco de Dados]
@@ -53,7 +53,7 @@
 Este é um projeto desenvolvido a fim de aprimorar conhecimentos e já deixar uma estrura php pronta para iniciar um novo projeto,
 Com um painel de login pronto e várias outras configurações preparadas.
 
-# Imagens
+## Imagens
 
 <div align="center" style="dispaly: inline-block;">
         <img align="center" alt="rafaeldevcode-login" height="auto" width="400" src="https://raw.githubusercontent.com/rafaeldevcode/painel-login/main/public/assets/images/painel-login.png">

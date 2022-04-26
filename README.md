@@ -44,7 +44,8 @@
 
 # Projeto
 
-Projeto desenvolvido com intuito de paerfeiçoar meu aprendizado em doctrine
+Este é um projeto desenvolvido a fim de aprimorar conhecimentos e já deixar uma estrura php pronta para iniciar um novo projeto,
+Com um painel de login pronto e várias outras configurações preparadas.
 
 # Imagens
 

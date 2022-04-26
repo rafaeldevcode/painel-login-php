@@ -8,14 +8,18 @@
 
     require_once __DIR__ . '/../../vendor/autoload.php';
 
-    class NotFoundController implements RequestHandlerInterface
+    class IndexMainController implements RequestHandlerInterface
     {
         public function handle(ServerRequestInterface $request): ResponseInterface
         {
 
-            $html = view('404', [
-                'title' => 'Página não encontrada | 404',
+            $html = view('index', [
+                'title' => 'Início',
             ]);
+
+            if(isset($_SESSION['logged'])){
+                return new Response(302, ['location' => '/dashboard']);
+            }
 
             return new Response(200, [], $html);
         }

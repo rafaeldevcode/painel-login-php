@@ -9,7 +9,7 @@
 
     $routes = require_once __DIR__ . '/../routes/web.php';
 
-    if(!array_key_exists(path(), $routes)): header('location: /not-found', true, 302); exit(); endif;
+    if(!array_key_exists(path(), $routes)): header('location: '.route('/not-found'), true, 302); exit; endif;
 
     Login::verifyLogin(path());
 

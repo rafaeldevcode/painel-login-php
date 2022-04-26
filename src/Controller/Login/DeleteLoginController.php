@@ -1,21 +1,22 @@
 <?php
 
-    namespace Painel\Controller\Register;
+    namespace Painel\Controller\Login;
 
+    use Painel\Services\Routers;
     use Psr\Http\Message\{ServerRequestInterface, ResponseInterface};
     use Psr\Http\Server\RequestHandlerInterface;
     use Nyholm\Psr7\Response;
 
     require_once __DIR__ . '/../../../vendor/autoload.php';
 
-    class RegisterController implements RequestHandlerInterface
+    class DeleteLogintController implements RequestHandlerInterface
     {
+        use Routers;
+
         public function handle(ServerRequestInterface $request): ResponseInterface
         {
-            $html = view('register/index', [
-                'title' => 'Register',
-            ]);
+            session_destroy();
 
-            return new Response(200, [], $html);
+            return new Response(302, ['location' => '/login']);
         }
     }

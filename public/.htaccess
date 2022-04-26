@@ -10,7 +10,7 @@ satisfy all
 # Fim da proteção do htaccess
 
 RewriteEngine On
-RewriteBase /painel-login-php
+RewriteBase /
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

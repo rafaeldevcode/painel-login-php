@@ -1,20 +1,22 @@
 <?php
 
-    namespace Painel\Controller;
+    namespace Painel\Controller\Login;
 
     use Painel\Model\User;
     use Painel\Helper\EntityManagerFactory;
-    use Painel\Services\Routers;
+    use Painel\Services\{Login, Routers};
     use Psr\Http\Message\{ServerRequestInterface, ResponseInterface};
     use Psr\Http\Server\RequestHandlerInterface;
     use Nyholm\Psr7\Response;
 
-    require_once __DIR__ . '/../../vendor/autoload.php';
+    require_once __DIR__ . '/../../../vendor/autoload.php';
 
-    class DashboardController implements RequestHandlerInterface
+    class StoreRealizaLoginController implements RequestHandlerInterface
     {
         private $entityManager;
         private $userRepository;
+
+        use Routers, Login;
 
         public function __construct()
         {
@@ -25,16 +27,21 @@
 
         public function handle(ServerRequestInterface $request): ResponseInterface
         {
+            $data = $request->getParsedBody();
+
             /**
              * @var User $user
              */
-            $user = $this->userRepository->findOneBy(['id' => $_SESSION['user_id']]);
+            $user = $this->userRepository->findOneBy(['email' => $data['email']]);
 
-            $html = view('dashboard', [
-                'name'  => $user->getName(),
-                'title' => 'Dashboard',
-            ]);
+            if((is_null($user)) || ($user->verifyPass($data['password'])) === false){
+                Routers::session('danger', 'Usuário e/ou senha incorreta!');
 
-            return new Response(200, [], $html);
+                return new Response(302, ['location' => route('/login')]);
+            }
+
+            Login::login($user->getId());
+
+            return new Response(302, ['location' => route('/dashboard')]);
         }
     }

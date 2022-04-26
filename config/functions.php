@@ -52,7 +52,9 @@ if(!function_exists('path')):
         if(($server_name === 'localhost') ||
         ($server_name === '127.0.0.1') ||
         ($server_name === '0.0.0.0')):
-            $path = !isset($_SERVER['PATH_INFO']) ? '/' : $_SERVER['PATH_INFO'];
+            // $path = !isset($_SERVER['PATH_INFO']) ? '/' : $_SERVER['PATH_INFO'];
+            $path = !isset($_SERVER['REDIRECT_URL']) ? '/' : $_SERVER['REDIRECT_URL'];
+            $path = str_replace('/'.pathUrl(), '', $path);
         else:
             $path = !isset($_SERVER['REDIRECT_URL']) ? '/' : $_SERVER['REDIRECT_URL'];
         endif;

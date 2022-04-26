@@ -2,17 +2,17 @@
 
     namespace Painel\Routes;
 
-    use Painel\Controller\{DashboardController, MainController, NotFoundController};
-    use Painel\Controller\Login\{LoginController, LogoutController, RealizaLoginController};
-    use Painel\Controller\Register\{CreateRegisterController, RegisterController};
+    use Painel\Controller\{IndexDashboardController, IndexMainController, IndexNotFoundController};
+    use Painel\Controller\Login\{CreateLoginController, DeleteLoginController, StoreLoginController};
+    use Painel\Controller\Register\{CreateRegisterController, StoreRegisterController};
 
     return [
-        '/'                => MainController::class,
-        '/not-found/'      => NotFoundController::class,
-        '/login/'          => LoginController::class,
-        '/register/'       => RegisterController::class,
-        '/dashboard/'      => DashboardController::class,
-        '/save-user/'      => CreateRegisterController::class,
-        '/logout/'         => LogoutController::class,
-        '/login-to/'       => RealizaLoginController::class,
+        '/'                => IndexMainController::class,
+        '/not-found/'      => IndexNotFoundController::class,
+        '/login/'          => CreateLoginController::class,
+        '/register/'       => CreateRegisterController::class,
+        '/dashboard/'      => IndexDashboardController::class,
+        '/save-user/'      => StoreRegisterController::class,
+        '/logout/'         => DeleteLoginController::class,
+        '/login-to/'       => StoreLoginController::class,
     ];
